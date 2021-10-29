@@ -68,3 +68,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# credits
+[This amazing 3d Model](https://sketchfab.com/3d-models/ftm-0970f30574d047b1976ba0aa6f2ef855) was build by [Luyssport](https://sketchfab.com/luyssport)
