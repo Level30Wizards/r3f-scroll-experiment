@@ -70,7 +70,7 @@ export const timelineFragments = [
             { x: 2, y: -1, z: -4.5 },
         ],
         text: {
-            content: 'Was very handsome',
+            content: 'A very handsome one',
             position: [
                 { x: 2, y: -1, z: -2 },
                 { x: 2, y: -1, z: -2 },
@@ -92,7 +92,7 @@ export const timelineFragments = [
             { x: 0, y: -0, z: 0 },
         ],
         text: {
-            content: 'Was very handsome',
+            content: 'A very handsome one',
             position: [
                 { x: 2, y: -1, z: -2 },
                 { x: 4, y: 2, z: -2 },
@@ -164,7 +164,7 @@ export const timelineFragments = [
             { x: 1, y: -1, z: -2.5 },
         ],
         text: {
-            content: 'Is YOU!',
+            content: 'Is You',
             position: [
                 { x: 1, y: 4, z: -4.5 },
                 { x: 2, y: 5, z: 0 },
@@ -182,7 +182,7 @@ export const timelineFragments = [
             { x: 1, y: -1, z: -2.5 },
         ],
         text: {
-            content: 'Is YOU!',
+            content: 'Is You',
             position: [
                 { x: 2, y: 5, z: 0 },
                 { x: 9, y: 4, z: -12 },
