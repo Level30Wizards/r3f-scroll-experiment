@@ -1,8 +1,12 @@
-export const Loader = ({ progress }) => {
+export const Loader = ({ progress, loaderDelayIsDone }) => {
     return (
         <div
             id="loader"
-            className={Math.ceil(progress) >= 100 ? 'finished' : ''}
+            className={
+                Math.ceil(progress) >= 100 && loaderDelayIsDone
+                    ? 'finished'
+                    : ''
+            }
         >
             <div className="background" id="one">
                 <div className="info">

@@ -1,3 +1,8 @@
+html,
+body {
+    overscroll-behavior: contain;
+}
+
 #outro > div {
     transition: opacity 1s ease-out;
     z-index: 1;
@@ -233,7 +238,7 @@ div > p:first-child {
         font-size: 2rem;
     }
     #loader .info h2 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     #loaderWrapper {
         width: 200px;
