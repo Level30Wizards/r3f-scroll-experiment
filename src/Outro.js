@@ -1,4 +1,4 @@
-export const Outro = ({ showOutro }) => {
+export const Outro = ({ showOutro, setOrbitControlsVis }) => {
     return (
         <div id="outro" className={showOutro ? 'visible' : ''}>
             <div id="credits">
@@ -28,8 +28,28 @@ export const Outro = ({ showOutro }) => {
             </div>
             <div id="controls">
                 <p>Controls : </p>
-                <p>use O to enable free-flight (Orbit Controls)</p>
-                <p>use L to disable free-flight (Orbit Controls)</p>
+                <p>
+                    use{' '}
+                    <button
+                        onClick={() => {
+                            setOrbitControlsVis(true);
+                        }}
+                    >
+                        O
+                    </button>{' '}
+                    to enable free-flight (Orbit Controls)
+                </p>
+                <p>
+                    use{' '}
+                    <button
+                        onClick={() => {
+                            setOrbitControlsVis(false);
+                        }}
+                    >
+                        L
+                    </button>{' '}
+                    to disable free-flight (Orbit Controls)
+                </p>
             </div>{' '}
         </div>
     );

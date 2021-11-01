@@ -6,7 +6,12 @@ import { applyAnimationToTimelineLine, handleIntro } from '../src/helpers/lerp';
 import { timelineFragments } from './helpers/timeline';
 import Island from './Island';
 
-export function MyScene({ setShowOutro, setShowIntro }) {
+export function MyScene({
+    setShowOutro,
+    setShowIntro,
+    setOrbitControlsVis,
+    orbitControlsVis,
+}) {
     // Drei hooks
     const data = useScroll();
     const { camera } = useThree();
@@ -17,7 +22,6 @@ export function MyScene({ setShowOutro, setShowIntro }) {
 
     // States
     const [currentText, setCurrentText] = useState();
-    const [orbitControlsVis, setOrbitControlsVis] = useState(false);
 
     // Request animation Frame
     useFrame(({ mouse }) => {

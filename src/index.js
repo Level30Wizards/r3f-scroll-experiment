@@ -11,6 +11,8 @@ import { Loader } from './Loader';
 function App() {
     const [showOutro, setShowOutro] = useState(false);
     const [showIntro, setShowIntro] = useState(true);
+    const [orbitControlsVis, setOrbitControlsVis] = useState(false);
+
     const [loaderDelayIsDone, setLoaderDelayIsDone] = useState(false);
     const progress = useProgress((state) => state.progress);
 
@@ -28,13 +30,18 @@ function App() {
                     loaderDelayIsDone={loaderDelayIsDone}
                 />
 
-                <Outro showOutro={showOutro} />
+                <Outro
+                    showOutro={showOutro}
+                    setOrbitControlsVis={setOrbitControlsVis}
+                />
                 <Intro showIntro={showIntro} />
 
                 <Suspense fallback={null}>
                     <Canvas>
                         <ScrollControls pages={10}>
                             <MyScene
+                                orbitControlsVis={orbitControlsVis}
+                                setOrbitControlsVis={setOrbitControlsVis}
                                 setShowOutro={setShowOutro}
                                 setShowIntro={setShowIntro}
                             />
