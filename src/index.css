@@ -71,9 +71,9 @@ div > p:first-child {
 }
 
 #loader .info h2 {
-    font-size: 2.5rem;
     color: white;
     font-family: Pacifico;
+    font-size: 2.5rem;
 }
 
 #loader .background {
@@ -132,12 +132,12 @@ div > p:first-child {
     font-family: Pacifico;
     font-size: 1.5rem;
     width: 200px;
+    margin: 0 1rem;
 }
 
 /* BOUNCY THINGS */
 
 #BT933373f8-7a3e-41c9-8b18-4d309b886397 {
-    rx: 50px;
     width: 100px;
     height: 200px;
     stroke: #dddddd;
@@ -151,15 +151,15 @@ div > p:first-child {
 
 @keyframes BT933373f8-7a3e-41c9-8b18-4d309b886397 {
     0% {
-        transform: translateX(50px);
+        transform: translateX(25px);
     }
 
     50% {
-        transform: translateX(100px);
+        transform: translateX(75px);
     }
 
     100% {
-        transform: translateX(50px);
+        transform: translateX(25px);
     }
 }
 
@@ -176,20 +176,19 @@ div > p:first-child {
 
 @keyframes BT3d244ad9-c41f-4803-9aa2-6260cdae9461 {
     0% {
-        transform: translateX(100px);
+        transform: translateX(75px);
     }
 
     50% {
-        transform: translateX(150px);
+        transform: translateX(125px);
     }
 
     100% {
-        transform: translateX(100px);
+        transform: translateX(75px);
     }
 }
 
 #BT933373f8-7a3e-41c9-8b18-4d309b886398 {
-    rx: 50px;
     width: 100px;
     height: 200px;
     stroke: #dddddd;
@@ -226,5 +225,24 @@ div > p:first-child {
     100% {
         opacity: 0;
         transform: translateY(150px);
+    }
+}
+
+@media (max-width: 30em) {
+    #loader .info h1 {
+        font-size: 2rem;
+    }
+    #loader .info h2 {
+        font-size: 1rem;
+    }
+    #loaderWrapper {
+        width: 200px;
+    }
+    #intro > div:nth-child(2) {
+        display: none;
+    }
+    #BT3d244ad9-c41f-4803-9aa2-6260cdae9462 {
+        animation: 1.5s BT3d244ad9-c41f-4803-9aa2-6260cdae9462 1000ms infinite
+            reverse;
     }
 }
