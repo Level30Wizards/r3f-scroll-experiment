@@ -16,7 +16,7 @@ export const Outro = ({ showOutro }) => {
                     </a>
                 </p>
                 <p>
-                    This Amazing 3d Model was made by{' '}
+                    Story and interaction{' '}
                     <a
                         target="_blank"
                         href="https://level30Wizards.com"

@@ -6,7 +6,7 @@ import { applyAnimationToTimelineLine, handleIntro } from '../src/helpers/lerp';
 import { timelineFragments } from './helpers/timeline';
 import Island from './Island';
 
-export function MyScene({ setShowOutro }) {
+export function MyScene({ setShowOutro, setShowIntro }) {
     // Drei hooks
     const data = useScroll();
     const { camera } = useThree();
@@ -94,13 +94,25 @@ export function MyScene({ setShowOutro }) {
             }
 
             if (
+                timelineProgressPerFragment[0] < 0.1 ||
                 timelineProgressPerFragment[
                     timelineProgressPerFragment.length - 1
-                ] > 0.9
+                ] > 0.85
             ) {
-                setShowOutro(true);
-            } else {
-                setShowOutro(false);
+                if (timelineProgressPerFragment[0] > 0.02) {
+                    setShowIntro(false);
+                } else {
+                    setShowIntro(true);
+                }
+                if (
+                    timelineProgressPerFragment[
+                        timelineProgressPerFragment.length - 1
+                    ] > 0.9
+                ) {
+                    setShowOutro(true);
+                } else {
+                    setShowOutro(false);
+                }
             }
         }
     });
@@ -124,46 +136,34 @@ export function MyScene({ setShowOutro }) {
                 <group ref={introGroupRef}>
                     <Text
                         fillOpacity={0}
-                        position={[
-                            3.287051563715002, 0.7618830587647809,
-                            1.8792822437156245,
-                        ]}
+                        position={[3, 0.7618830587647809, 1.8792822437156245]}
                         font="font/Fruktur-Regular.ttf"
                         color="white"
                         anchorX="center"
                         anchorY="middle"
                         fontSize={0.15}
-                        outlineBlur={0.05}
                     >
-                        The Warrior
+                        The Adventurer
                     </Text>
                     <Text
                         fillOpacity={0}
-                        position={[
-                            3.287051563715002, 0.5618830587647809,
-                            1.8792822437156245,
-                        ]}
+                        position={[3, 0.5618830587647809, 1.8792822437156245]}
                         font="font/Fruktur-Regular.ttf"
                         color="white"
                         anchorX="center"
                         anchorY="middle"
                         fontSize={0.1}
-                        outlineBlur={0.05}
                     >
                         A Short Story
                     </Text>
                     <Text
                         fillOpacity={0}
-                        position={[
-                            3.287051563715002, 0.3618830587647809,
-                            1.8792822437156245,
-                        ]}
+                        position={[3, 0.3618830587647809, 1.8792822437156245]}
                         font="font/Fruktur-Regular.ttf"
                         color="#d8cf25"
                         anchorX="center"
                         anchorY="middle"
                         fontSize={0.1}
-                        outlineBlur={0.05}
                     >
                         By Level30Wizards
                     </Text>
